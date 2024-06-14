@@ -1,0 +1,159 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <title>Phalanx-Register</title>
+
+      <!-- Custom fonts for this template-->
+      <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+      <!-- Custom styles for this template-->
+      <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    </head>
+
+    <body class="bg-gradient-primary">
+
+      <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-12" style="text-align:center">
+                <div class="p-5 text-center">
+                  <img src="img/phalanxCitel.png" class="img-fluid" style="width:50%"></img>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="p-5">
+                	<div class="text-center">
+                		<h1 class="h4 text-gray-900 mb-4">Create an Account</h1>
+                	</div>
+                	<form class="user" id="RegisterForm" method="POST" data-toggle="validator">
+
+
+            			<!-- 	<p> FOR THE REGISTER FORM     -->
+            			<p id="demo"></p>
+
+
+
+            			<div class="form-group row">
+            				<div class="col-sm-6 mb-3 mb-sm-0">
+            					<input type="text" class="form-control form-control-user" id="FirstName" placeholder="First Name" required/>
+            				</div>
+            				<div class="col-sm-6">
+            					<input type="text" class="form-control form-control-user" id="LastName" placeholder="Last Name" required/>
+            				</div>
+            			</div>
+            			<div class="form-group">
+            				<input type="username" class="form-control form-control-user" id="Username" placeholder="Username" required/>
+            			</div>
+            			<div class="form-group">
+            				<input type="email" class="form-control form-control-user" id="Email" placeholder="Email Address" required/>
+            			</div>
+            			<div class="form-group row">
+            				<div class="col-sm-6 mb-3 mb-sm-0">
+            					<input type="password" class="form-control form-control-user" id="InputPassword" placeholder="Password" required/>
+            				</div>
+            				<div class="col-sm-6">
+            					<input type="password" class="form-control form-control-user" id="RepeatPassword" placeholder="Repeat Password" required/>
+            				</div>
+            			</div>
+            			<button class="btn btn-primary btn-user btn-block" id="submit" onclick="loadDoc()" type="button">
+            				Register Account
+            			</button>
+            			<hr>
+            		</form>
+            		<hr>
+            		  <div class="text-center" style="display:none;">
+                    	<a class="small" href="forgot-password.html">Forgot Password?</a>
+                  	</div>
+                  	<div class="text-center">
+                    	<a class="small" href="login.html">Already have an account? Login!</a>
+                  	</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
+      
+      <!--<script data-main="js/main" src="js/require.js"></script> -->
+      <!--<script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script> -->
+
+    </body>
+
+
+    <script type="text/javascript">
+    	
+    	function loadDoc() {
+    		var xhttp = new XMLHttpRequest();
+    		
+    		xhttp.onreadystatechange = function() {
+    			if (this.readyState == 4 && this.status == 200) {
+    				document.getElementById("demo").innerHTML = this.responseText;
+            window.location.replace("login.html");
+    			}
+    		};
+    		
+    		var FirstName = document.getElementById("FirstName").value;
+    		var LastName = document.getElementById("LastName").value;
+    		var Username = document.getElementById("Username").value;
+    		var Email = document.getElementById("Email").value;
+    		var InputPassword = document.getElementById("InputPassword").value;
+    		var RepeatPassword = document.getElementById("RepeatPassword").value;
+
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (FirstName == "" || LastName == "" || Username == "" || Email == "" || InputPassword == "" || RepeatPassword == "") {
+          alert("Some field is missing");
+          window.location.replace("register.html");
+          exit();
+        }
+
+        if (InputPassword != RepeatPassword) {
+          alert("The password don't match");
+          document.getElementById("InputPassword").value = "";
+          document.getElementById("RepeatPassword").value = "";
+          exit();
+        }
+    		
+        if (!Email.match(mailFormat)) {
+          alert("You've entered an invalid e-mail address");
+          document.getElementById("Email").value = "";
+          document.getElementById("InputPassword").value = "";
+          document.getElementById("RepeatPassword").value = "";
+          exit();
+        }
+
+    		var form = "firstname=" + FirstName + "&lastname=" + LastName + "&username=" + Username + "&email=" + Email + "&password=" + InputPassword + "&repeat=" + RepeatPassword;
+    		
+    		xhttp.open("POST", "formProcess.php", true);
+    		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    		xhttp.send(form);
+    	}
+
+    </script>	
+
+
+    </html>

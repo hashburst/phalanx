@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+	<form>
+		<input type="hidden" name="nips" id="nips" value="nips">
+		<button id="nipsButton" onclick="NiPsFunction()">H/NIPS</button>
+	</form>
+</body>
+<script type="text/javascript">
+	// Funzione del NIPS Button
+	function NiPsFunction() {
+
+        var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange=function() {       	
+    		if(xhttp.readyState==4 && xhttp.status==200) {
+    			var response = JSON.parse(xhttp.responseText);
+    			alert("test!");
+    		} else {
+    			alert("An error has occurred making request!");
+    		}       	
+        }
+        
+        var nips = document.getElementById("nips").value;
+        
+        xhttp.open("GET", "formProcess.php?nips="+nips, true);
+        xhttp.send();
+    }
+</script>
+</html>

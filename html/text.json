@@ -1,0 +1,23 @@
+{ "alerts": [
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.0/24","ua":"phalanx","type":0,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.192","ua":"phalanx","type":1,"payload":"port map"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.144","ua":"phalanx","type":2,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.193","ua":"phalanx","type":2,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.116","ua":"phalanx","type":1,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.117","ua":"phalanx","type":0,"payload":"port map"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.118","ua":"phalanx","type":0,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.221","ua":"phalanx","type":0,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.225","ua":"phalanx","type":2,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.62","ua":"phalanx","type":2,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.72","ua":"phalanx","type":1,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.81","ua":"phalanx","type":0,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.83","ua":"phalanx","type":2,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.192","ua":"phalanx","type":0,"payload":"traffic cap"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.84","ua":"phalanx","type":0,"payload":"port map"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.0/24","ua":"phalanx","type":0,"payload":"port map"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.192","ua":"phalanx","type":0,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.116","ua":"phalanx","type":1,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.62","ua":"phalanx","type":2,"payload":"port scan"},
+	{"timeUTC":"2019-09-19 12:11:43","ip":"192.168.1.144","ua":"phalanx","type":0,"payload":"port scan"}
+	]
+}
