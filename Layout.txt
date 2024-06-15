@@ -22,9 +22,11 @@ phalanx_source/
 ├── cloud/
 │   ├── ingestion.py
 │   ├── anomaly_detection.py
-│   └── key_management.py
+│   ├── key_management.py
+│   └── key_management.java
 │
-└── infrastructure/
+└── infrastructure/ (Cloud Infrastructure Security: Terraform)
+    ├── secure_communication.py (Secure Communication and Data Transmission)
     ├── main.tf
     ├── variables.tf
     └── outputs.tf
