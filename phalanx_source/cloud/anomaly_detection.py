@@ -4,6 +4,7 @@ from tensorflow import keras
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+import pandas as pd
 
 class AnomalyDetectionModel:
     def __init__(self, input_shape):
@@ -49,12 +50,17 @@ def split_data(X, y):
     X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
     return X_train, X_val, X_test, y_train, y_val, y_test
 
-# Load your dataset (example placeholder)
+# Load your dataset (real data loading logic)
 def load_data():
-    # Replace this with your actual data loading logic
-    data = np.random.rand(1000, 20)  # Example data
-    labels = np.random.randint(0, 2, 1000)  # Example labels
-    return data, labels
+    # Replace with your actual data loading logic
+    # Example: Load data from a CSV file
+    df = pd.read_csv('path/to/your/data.csv')
+    
+    # Assuming your data has features (X) and labels (y) columns
+    X = df.drop('label_column', axis=1)  # Replace 'label_column' with your actual label column name
+    y = df['label_column']  # Replace 'label_column' with your actual label column name
+    
+    return X.values, y.values
 
 if __name__ == "__main__":
     # Load and preprocess data
