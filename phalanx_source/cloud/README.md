@@ -87,6 +87,8 @@ Questo script implementa un sistema di rilevamento delle anomalie utilizzando te
                                 
                                 return X.values, y.values
 
+(*) N.B.: è possibile modificare la logica di caricamento dei dati scegliendo come fonte o sorgente di acquisizione in tempo reale come database oppure API.
+
 #### Descrizione del Codice
 
 - Caricamento del File CSV:
@@ -99,6 +101,10 @@ Questo script implementa un sistema di rilevamento delle anomalie utilizzando te
 
 - Restituzione dei Dati:
 
-  - X.values e y.values convertono i dati in matrici numpy per essere compatibili con l'input del modello di machine learning.                                
+  - X.values e y.values convertono i dati in matrici numpy per essere compatibili con l'input del modello di machine learning.
+ 
+#### Note
 
-(*) N.B.: è possibile modificare la logica di caricamento dei dati scegliendo come fonte o sorgente di acquisizione in tempo reale come database oppure API.
+- Sostituire 'path/to/your/data.csv' con il percorso effettivo del tuo file CSV contenente i dati reali.
+- In questa versione dello script si utilizza **pandas** per caricare il file CSV. Per ricorrere ad un'altra fonte di dati (ad esempio: database o API), è necessario adattare il codice di **load_data** di conseguenza.
+- Le funzioni **preprocess_data** e **split_data** rimangono invariate e possono essere riutilizzate con qualsiasi fonte di dati, purché i dati siano formattati correttamente.                        
