@@ -34,11 +34,11 @@ L'inclusione e l'utilizzo di un client per la gestione delle chiavi crittografic
 - Installare Composer: se non fosse già Composer installato, scaricarlo ed installarlo seguendo le istruzioni ufficiali.
 - Creaziond ci un file composer.json nella directory principale del progetto. Ad esempio:
   
-  {
-      "require": {
-          "some/hvac-client": "^1.0"  // Assicurarsi di usare il nome corretto del pacchetto del client hvac
-      }
-  }
+          {
+              "require": {
+                  "some/hvac-client": "^1.0"  // Assicurarsi di usare il nome corretto del pacchetto del client hvac
+              }
+          }
   
 - Installa le Dipendenze: eseguire il comando "composer install" nella directory del progetto per installare le dipendenze dichiarate. Questo comando, come anticipato, creerà una directory **vendor** e genererà il file **autoload.php**.
 - Includere il file autoload.php nel tuo script PHP per caricare automaticamente le classi del **client hvac**: "require_once '../vendor/autoload.php';"
