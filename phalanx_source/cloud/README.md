@@ -20,10 +20,10 @@
 
 - Esempio di Utilizzo:
 
-          - Inizializza l'oggetto KeyManagement con l'indirizzo di Vault e il token.
-          - Genera una nuova chiave.
-          - Ruota la chiave esistente.
-          - Recupera e stampa la chiave corrente.
+  - Inizializza l'oggetto KeyManagement con l'indirizzo di Vault e il token.
+  - Genera una nuova chiave.
+  - Ruota la chiave esistente.
+  - Recupera e stampa la chiave corrente.
 
 **Nota**
 Sostituire **your-vault-token** con un token di autenticazione valido e personalizzare la logica di generazione e rotazione delle chiavi in base specifiche esigenze del sistema. Inoltre, verificare che il percorso **"secret/data/keys"** corrisponda alla configurazione del Vault impiegato dal sistema.
