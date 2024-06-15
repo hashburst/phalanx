@@ -9,7 +9,7 @@ Key elements:
 
 - Workstation (WS) Cluster: These are the endpoint devices that the Phalanx service monitors and protects, likely using an EDR/XDR approach.
 
--AP I: This provides the interface for interacting with the Phalanx platform, likely for integrating with other applications or services.
+- API: This provides the interface for interacting with the Phalanx platform, likely for integrating with other applications or services.
 
 - Virtual Machine Cluster: This represents the underlying compute resources that host the Phalanx platform and the web applications it supports.
 
