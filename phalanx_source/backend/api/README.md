@@ -52,10 +52,7 @@ L'inclusione e l'utilizzo di un client per la gestione delle chiavi crittografic
   
 - Sostituire, dove richiesto, **'your-token'** con il token effettivo per l'autenticazione del **client hvac**. Inoltre, il nome del pacchetto del client hvac (some/hvac-client) deve essere sostituito con il nome reale del pacchetto impiegato.
 - Esempio di utilizzo della classe:
-  
-<?php
-// Esempio di utilizzo
-$keyManager = new KeyManagement();
-$newKey = $keyManager->generateKey();
-echo "Generated Key: " . $newKey;
-?>
+
+          $keyManager = new KeyManagement();
+          $newKey = $keyManager->generateKey();
+          echo "Generated Key: " . $newKey;
