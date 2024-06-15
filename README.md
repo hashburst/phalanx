@@ -1,6 +1,7 @@
 # phalanx
 High-level architectural representation of the Phalanx platform, which is described as an "EDR/XDR as a Service" with homomorphic/cryptographic analysis capabilities
 ![Phalanx](https://github.com/hashburst/phalanx/assets/55950175/b29a109f-a458-41d4-a9ed-1ea9ac85c67f)
+
 Phalanx is a service that provides Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR) capabilities. It leverages homomorphic encryption and cryptographic analysis to enhance security. This means that Phalanx can analyze encrypted data without decrypting it, thereby maintaining data privacy while still being able to detect and respond to security threats.
 
 Key elements:
