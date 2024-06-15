@@ -1,5 +1,5 @@
-# phalanx
-High-level architectural representation of the Phalanx platform, which is described as an "EDR/XDR as a Service" with homomorphic/cryptographic analysis capabilities.
+# Phalanx
+High-level architectural representation of the Phalanx platform (last version 19/09/2019), which is described as an "EDR/XDR as a Service" with homomorphic/cryptographic analysis capabilities.
 
 ![Phalanx](https://github.com/hashburst/phalanx/assets/55950175/b29a109f-a458-41d4-a9ed-1ea9ac85c67f)
 
