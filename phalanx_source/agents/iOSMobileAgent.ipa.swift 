@@ -1,0 +1,46 @@
+import UIKit
+import DeviceKit
+
+class ViewController: UIViewController {
+
+    let serverURL = URL(string: "http://your-backend-server/api/process")!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        sendDataToServer()
+    }
+
+    func collectSystemData() -> [String: Any] {
+        let device = Device.current
+        return [
+            "device": device.description,
+            "os": device.systemName ?? "iOS",
+            "os_version": device.systemVersion ?? "",
+            "battery_level": device.batteryLevel ?? 0,
+            "is_battery_charging": device.batteryState == .charging
+        ]
+    }
+
+    func sendDataToServer() {
+        let data = collectSystemData()
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: data, options: []) else { return }
+
+        var request = URLRequest(url: serverURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = httpBody
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("Failed to send data: \(error)")
+                return
+            }
+
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                print("Data sent successfully")
+            } else {
+                print("Failed to send data")
+            }
+        }.resume()
+    }
+}
