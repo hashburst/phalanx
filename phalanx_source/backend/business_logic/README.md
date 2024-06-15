@@ -12,3 +12,15 @@
 - **Restituzione dei Risultati**: la funzione restituisce l'array dei risultati, che include i valori elaborati e le eventuali anomalie rilevate.
  
 In questa implementazione è possibile adattare le soglie dinamiche e aggiungere ulteriori metriche di sistema per un'analisi più completa e avanzata.
+
+Esempio di utilizzo:
+
+                        $data = [
+                            'cpu_usage' => '95.6',
+                            'memory_usage' => '450',
+                            'disk_usage' => '92.5',
+                            'network_activity' => '1050'
+                        ];
+                        
+                        $result = processData($data);
+                        print_r($result);
