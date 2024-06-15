@@ -24,10 +24,10 @@ L'inclusione e l'utilizzo di un client per la gestione delle chiavi crittografic
 
 **Requisiti e dipendenze**
 
+- **Il client hvac** è una libreria PHP che facilita l'interazione con **HashiCorp Vault**, un sistema per la gestione delle chiavi segrete. Questa libreria consente di eseguire operazioni come la generazione, archiviazione, e rotazione delle chiavi crittografiche.
 - "require_once '../vendor/autoload.php';" è un comando in PHP che include il file **autoload** di **Composer** nello script.
 - **Composer** è un gestore di dipendenze per PHP che permette di dichiarare le librerie necessarie ad un progetto PHP e di installarle facilmente. Eseguendo "composer install" in un progetto PHP, **Composer** crea una cartella **vendor** e un file **autoload.php** dentro di essa. Questo file autoload contiene tutte le classi e le librerie necessarie per il progetto, rendendo più semplice il caricamento automatico delle classi senza doverle includere manualmente una per una.
 - La linea "use \Hvac\Hvac;" è una dichiarazione di utilizzo (use statement) in PHP. Questo permette di utilizzare la **classe Hvac del namespace Hvac** nello script senza dover specificare il namespace completo ogni volta che viene richiesto l'uso di quella classe.
-- **Il client hvac** è una libreria PHP che facilita l'interazione con **HashiCorp Vault**, un sistema per la gestione delle chiavi segrete. Questa libreria consente di eseguire operazioni come la generazione, archiviazione, e rotazione delle chiavi crittografiche.
 
 #### Passaggi per Configurare e Utilizzare il Client hvac
 
