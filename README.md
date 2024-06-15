@@ -21,4 +21,4 @@ Key elements:
 
 - Software as a Service (SaaS): The diagram indicates that Phalanx is positioned as a SaaS offering, providing security and monitoring capabilities as a service to its users.
 
-Overall, Phalanx is as a cloud-based, platform-as-a-service (PaaS) solution that offers advanced security and monitoring capabilities, leveraging techniques like homomorphic encryption and cryptographic analysis to protect customer data and systems.
+Overall, **Phalanx is as a cloud-based**, **platform-as-a-service (PaaS) solution** that offers advanced security and monitoring capabilities, leveraging techniques like **homomorphic encryption** and **cryptographic analysis to protect customer data and systems**.
