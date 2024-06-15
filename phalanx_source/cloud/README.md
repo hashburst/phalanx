@@ -10,13 +10,13 @@
 
 - Classe KeyManagement:
 
-          - __init__: Inizializza la connessione a Vault utilizzando l'indirizzo e il token forniti.
-          
-          - generate_key: Crea o aggiorna un segreto con una nuova chiave. (Nota: generated_key è un valore di esempio; dovrai implementare la tua logica di generazione delle chiavi).
-          
-          - rotate_key: Ruota la chiave esistente aggiornando il segreto con una nuova chiave. (Nota: rotated_key è un valore di esempio; dovrai implementare la tua logica di rotazione delle chiavi).
-          
-          - get_key: Recupera la chiave corrente dal percorso specificato.
+  - __init__: Inizializza la connessione a Vault utilizzando l'indirizzo e il token forniti.
+  
+  - generate_key: Crea o aggiorna un segreto con una nuova chiave. (Nota: generated_key è un valore di esempio; dovrai implementare la tua logica di generazione delle chiavi).
+  
+  - rotate_key: Ruota la chiave esistente aggiornando il segreto con una nuova chiave. (Nota: rotated_key è un valore di esempio; dovrai implementare la tua logica di rotazione delle chiavi).
+  
+  - get_key: Recupera la chiave corrente dal percorso specificato.
 
 - Esempio di Utilizzo:
 
