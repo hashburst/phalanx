@@ -27,3 +27,78 @@
 
 **Nota**
 Sostituire **your-vault-token** con un token di autenticazione valido e personalizzare la logica di generazione e rotazione delle chiavi in base specifiche esigenze del sistema. Inoltre, verificare che il percorso **"secret/data/keys"** corrisponda alla configurazione del Vault impiegato dal sistema.
+
+
+#### Descrizione del file anomaly_detection.py 
+
+Questo script implementa un sistema di rilevamento delle anomalie utilizzando tecniche di apprendimento automatico (AI/ML). Questo file é parte della sezione "Clouds" della piattaforma Phalanx EDR/XDR e utilizzerà librerie come TensorFlow o PyTorch per l'analisi dei dati.
+
+#### Descrizione del Codice
+
+- **AnomalyDetectionModel**:
+
+  - Inizializza un modello di rete neurale usando Keras.
+  - Definisce una rete neurale con livelli densi e dropout per evitare l'overfitting.
+  - Compila il modello con l'ottimizzatore Adam e la funzione di perdita binary_crossentropy.
+
+- **Metodi del Modello**:
+
+  - train: Allena il modello sui dati di addestramento e di validazione.
+  - predict: Genera previsioni sui dati di input.
+  - evaluate: Valuta il modello sui dati di test.
+  
+- **Funzioni di Preprocessing e Divisione dei Dati**:
+
+  - preprocess_data: Normalizza i dati utilizzando StandardScaler.
+  - split_data: Divide i dati in set di addestramento, validazione e test.
+
+- **Funzione load_data**:
+
+  - Carica un dataset di esempio (sostituisci questa funzione con la logica di caricamento dei dati effettiva).
+
+- **Blocco Principale (if __name__ == "__main__":)**:
+
+  - Carica e preprocessa i dati.
+  - Divide i dati in set di addestramento, validazione e test.
+  - Inizializza e allena il modello.
+  - Valuta il modello sui dati di test e genera un report di classificazione.
+ 
+#### Note
+
+- **Librerie**: installare le librerie necessarie come **tensorflow**, **numpy**, **scikit-learn**.
+
+                            Script bash (sh):
+                            pip install tensorflow numpy scikit-learn
+
+- **Dataset**: sostituire la funzione **load_data** con il codice necessario per caricare il flusso di dati reali. Per caricare un flusso di dati reali, in questo caso, si ipotizza una logica di caricamento che importi i dati da una sorgente effettiva come un file CSV. Ecco la funzione **load_data** qui scelta(*):
+
+                            import pandas as pd
+                            
+                            def load_data():
+                                # Replace with your actual data loading logic
+                                # Example: Load data from a CSV file
+                                df = pd.read_csv('path/to/your/data.csv')
+                                
+                                # Assuming your data has features (X) and labels (y) columns
+                                # Replace 'label_column' with your actual label column name
+                                X = df.drop('label_column', axis=1) 
+                                # Replace 'label_column' with your actual label column name
+                                y = df['label_column']  
+                                
+                                return X.values, y.values
+
+#### Descrizione del Codice
+
+- Caricamento del File CSV:
+
+  - Utilizzare pd.read_csv per caricare il file CSV. Sostituire 'path/to/your/data.csv' con il percorso effettivo della fonte dei dati, in questo caso un file CSV.
+  
+- Separazione delle Features e delle Etichette:
+
+  - Assumendo che il dataset sia strutturato con le features (X) e le etichette (y) in colonne separate nel DataFrame, X contiene tutte le colonne tranne quella delle etichette, mentre y contiene la colonna delle etichette.
+
+- Restituzione dei Dati:
+
+  - X.values e y.values convertono i dati in matrici numpy per essere compatibili con l'input del modello di machine learning.                                
+
+(*) N.B.: è possibile modificare la logica di caricamento dei dati scegliendo come fonte o sorgente di acquisizione in tempo reale come database oppure API.
