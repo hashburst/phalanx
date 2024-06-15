@@ -16,6 +16,8 @@ phalanx_source/
 │       └── database.php
 │
 ├── agents/
+│   ├── android_mobile_agent.apk.kotlin
+│   ├── iOSMobileAgent.ipa.swift
 │   ├── windows_agent.py
 │   ├── linux_agent.py
 │   └── macos_agent.py
@@ -28,6 +30,8 @@ phalanx_source/
 │
 └── infrastructure/ (Cloud Infrastructure Security: Terraform)
     ├── secure_communication.py (Secure Communication and Data Transmission)
+    ├── incident_response.py
+    ├── models.py
     ├── main.tf
     ├── variables.tf
     └── outputs.tf
