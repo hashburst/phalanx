@@ -8,7 +8,6 @@ phalanx_source/
 ├── backend/
 │   ├── api/
 │   │   ├── index.php
-│   │   ├── process_data.php
 │   │   ├── key_management.php
 │   │   └── auth.php
 │   ├── business_logic/
